@@ -2,15 +2,15 @@ require_relative 'player'
 
 class Team
 
-	attr_accessor :teamName, :playersPool
+	attr_accessor :team_name, :players_pool
 
 	def initialize()
-		@teamName = 'Default team name'
-		@playersPool = []
+		@team_name = 'Default team name'
+		@players_pool = []
 	end
 
 	def set_name(name)
-		@teamName = name
+		@team_name = name
 	end
 
 	def add_player(name, position)
