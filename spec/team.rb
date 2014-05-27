@@ -14,6 +14,7 @@ class Team
 	end
 
 	def add_player(name, position)
+		@players_pool.push(Player.new(name, position))
 	end
 
 	def remove_player(name, position)
@@ -26,3 +27,6 @@ class Team
 	end
 
 end
+
+t = Team.new
+t.players_pool.push(Player.new('Juan', 'Defensa'));
