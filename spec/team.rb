@@ -21,6 +21,9 @@ class Team
 	end
 
 	def show_players()
+		for p in players_pool do
+			puts p.name + ' ' + p.position
+		end
 	end
 
 	def filter_by_position(position)
