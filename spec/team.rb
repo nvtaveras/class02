@@ -4,13 +4,9 @@ class Team
 
 	attr_accessor :team_name, :players_pool
 
-	def initialize()
-		@team_name = 'Default team name'
+	def initialize(team_name = 'Default Team Name')
+		@team_name = team_name
 		@players_pool = []
-	end
-
-	def set_name(name)
-		@team_name = name
 	end
 
 	def add_player(name, position)
