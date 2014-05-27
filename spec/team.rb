@@ -27,6 +27,3 @@ class Team
 	end
 
 end
-
-t = Team.new
-t.players_pool.push(Player.new('Juan', 'Defensa'));
