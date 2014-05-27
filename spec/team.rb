@@ -22,11 +22,7 @@ class Team
 	end
 
 	def filter_by_position position
-		res = []
-		@players_pool.each do |p|
-			res.push(p) if p.position == position
-		end
-		res
+		@players_pool.select { |p| p.position == position }
 	end
 
 end
