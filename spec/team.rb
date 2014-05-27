@@ -10,6 +10,7 @@ class Team
 	end
 
 	def set_name(name)
+		@teamName = name
 	end
 
 	def add_player(name, position)
