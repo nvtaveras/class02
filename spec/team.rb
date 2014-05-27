@@ -31,9 +31,3 @@ class Team
 	end
 
 end
-
-t = Team.new
-t.players_pool.push(Player.new('Juan', 'Defensa'));
-t.players_pool.push(Player.new('Juan', 'Ataque'));
-t.remove_player('Juan', 'Defensa')
-t.show_players
