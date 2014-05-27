@@ -18,6 +18,7 @@ class Team
 	end
 
 	def remove_player(name, position)
+		@players_pool.delete_if { |p| p.name == name && p.position == position }
 	end
 
 	def show_players()
@@ -30,3 +31,9 @@ class Team
 	end
 
 end
+
+t = Team.new
+t.players_pool.push(Player.new('Juan', 'Defensa'));
+t.players_pool.push(Player.new('Juan', 'Ataque'));
+t.remove_player('Juan', 'Defensa')
+t.show_players
