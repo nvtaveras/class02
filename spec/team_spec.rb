@@ -36,4 +36,18 @@ describe Team do
 
 	end
 
+	describe "#filter_by_position" do
+
+		context "with an existing player position" do
+			it "should return an array with all the players with that position" do
+				t = Team.new
+				t.add_player('Shaquille Oneal', 'Center')
+				t.add_player('Lebron James', 'Shooting Guard')
+				t.add_player('Kevin Duran', 'Shooting Guard')
+				expect t.filter_by_position('Shooting Guard').any? { |p| p.position != 'Shooting Guard' }.should == false
+			end
+		end
+
+	end
+
 end
