@@ -3,6 +3,24 @@ require 'team'
 
 describe Team do
 
+	describe "#initialize" do
+
+		context "with team name as parameter" do
+			it "should change the team name to the received parameter" do
+				t = Team.new('Miami Heat')
+				expect t.team_name.should == 'Miami Heat'
+			end
+		end
+
+		context "without team name as parameter" do
+			it "should set a default team name" do
+				t = Team.new
+				expect t.team_name.should == 'Default Team Name'
+			end
+		end
+
+	end
+
 	describe "#add_player" do
 
 		context "with a new player" do
