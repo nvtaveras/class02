@@ -13,6 +13,14 @@ describe Team do
 			end
 		end
 
+		context "with an already existing player" do
+			it "should raise an error" do
+				t = Team.new
+				t.add_player('Shaquille Oneal', 'Center')
+				expect {t.add_player('Shaquille Oneal', 'Center')}.to raise_error
+			end
+		end
+
 	end
 
 end
