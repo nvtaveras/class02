@@ -23,4 +23,17 @@ describe Team do
 
 	end
 
+	describe "#remove_player" do
+
+		context "with an existing player" do
+			it "should delete the player from the current team" do
+				t = Team.new
+				t.add_player('Shaquille Oneal', 'Center')
+				t.remove_player('Shaquille Oneal', 'Center')
+				expect t.players_pool.any? { |p| p.name == 'Shaquille Oneal' && p.position == 'Center' }.should == false
+			end
+		end
+
+	end
+
 end
