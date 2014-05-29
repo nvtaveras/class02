@@ -10,6 +10,7 @@ class Team
 	end
 
 	def add_player name, position
+		@players_pool.each { |p| raise "That player already exists!" if p.name == name && p.position == position }
 		@players_pool.push(Player.new(name, position))
 	end
 
@@ -26,4 +27,3 @@ class Team
 	end
 
 end
-
